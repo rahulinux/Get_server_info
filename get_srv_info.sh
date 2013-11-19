@@ -2,8 +2,8 @@
 # 
 # Script Name	: get_server_details.sh
 # Created On	: Tue Nov 19 17:35:33 IST 2013
-# Author		: Rahul Patil<http://www.linuxian.com>
-# Purpose		: Fetch server details using ssh and generate report in csv format
+# Author	: Rahul Patil<http://www.linuxian.com>
+# Purpose	: Fetch server details using ssh and generate report in csv format
 # Report Bugs	: loginrahul90@gmail.com
 # 
 
