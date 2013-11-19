@@ -6,7 +6,6 @@
 # Purpose	: Fetch server details using ssh and generate report in csv format
 # Report Bugs	: loginrahul90@gmail.com
 # 
-
 set -e
 # username to connect via ssh
 USER=root
