@@ -19,9 +19,8 @@ func_ssh() {
 
 	local Ipaddr=$1
 	local Cmd="${@:2}"
-	local LogIt=${output_csv}
-	ssh -q -o "BatchMode yes" -o "ConnectTimeout 5" -o "StrictHostKeyChecking no" -l $USER $Ipaddr "${Cmd}"
-	[[ $? -ne 0 ]] && printf "${Ipaddr}\tUnable to connect to host\n" 
+	ssh -q -o "BatchMode yes" -o "ConnectTimeout 5" -o "StrictHostKeyChecking no" -l $USER $Ipaddr "${Cmd}" ||
+	printf "${Ipaddr}\tUnable to connect to host\n" 
 }
 
 csv_header() {
@@ -62,7 +61,7 @@ ParseDiskUsage() {
 Main(){
 	[[ -f $servers_list ]] || { echo "Error: server list does not exists ${servers_list}" >&2; exit 1; }
 	fetch_details_in_array=()
-	csv_header > $output_csv
+	csv_header 
 	for srv in $(< $servers_list );
 	do
 		echo "Fetching Details of Host: $srv....."
