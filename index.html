@@ -37,15 +37,17 @@
 <h1>
 <a name="purpose" class="anchor" href="#purpose"><span class="octicon octicon-link"></span></a>Purpose</h1>
 
-<p>Fetch server details like Total CPU, Memory, Disk Usage and store in CSV format using Bash Script </p>
+<p>Fetch server details like Total CPU, Memory, Disk Usage and store in CSV format using Bash Script. </p>
 
 <h1>
 <a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h1>
 
-<p>SSH Password less authentication required 
-[ You can modify script for use tool like <code>sshpass</code> ]</p>
+<p>There are two option for remote server authentication </p>
 
-<h1>
+<ul>
+<li>If you have ssh password less authentication, then you can use this script without any changes</li>
+<li>if you don't have above option then you can install <code>sshpass</code> package and uncomment sshpass option in script </li>
+</ul><h1>
 <a name="how-to-use-it" class="anchor" href="#how-to-use-it"><span class="octicon octicon-link"></span></a>How to use it?</h1>
 
 <pre><code>wget https://raw.github.com/rahulinux/get_server_info/master/get_srv_info.sh
