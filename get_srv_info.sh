@@ -19,6 +19,15 @@ func_ssh() {
 
 	local Ipaddr=$1
 	local Cmd="${@:2}"
+	# if you don't have ssh key based authenticaion setup and if you want manually specify password
+	# then you can install `sshpass` package and uncomment following line 
+	
+	# For sshpass 
+	# sshpass -p 'password' ssh -q -o "ConnectTimeout 5" -o "StrictHostKeyChecking no" -l $USER $Ipaddr "${Cmd}" ||
+        # printf "${Ipaddr}\tUnable to connect to host\n"
+	
+	#-----------------------------------------------
+	# For key based auth
 	ssh -q -o "BatchMode yes" -o "ConnectTimeout 5" -o "StrictHostKeyChecking no" -l $USER $Ipaddr "${Cmd}" ||
 	printf "${Ipaddr}\tUnable to connect to host\n" 
 }
