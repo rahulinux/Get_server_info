@@ -2,11 +2,14 @@ get_server_info
 ===============
 
 # Purpose 
-Fetch server details like Total CPU, Memory, Disk Usage and store in CSV format using Bash Script 
+Fetch server details like Total CPU, Memory, Disk Usage and store in CSV format using Bash Script. 
 
 # Requirements
-SSH Password less authentication required 
-[ You can modify script for use tool like `sshpass` ]
+
+There are two option for remote server authentication 
+
+  - If you have ssh password less authentication, then you can use this script without any changes
+  - if you don't have above option then you can install `sshpass` package and uncomment sshpass option in script 
 
 
 # How to use it?
