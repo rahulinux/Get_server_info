@@ -10,7 +10,7 @@ To fetch server details like Total CPU, Memory, Disk Usage, etc.. from central l
     - If you have ssh password less authentication, then you can use this script without any changes
     - if you don't have above option then you can install `sshpass` package and uncomment sshpass option in script
 
-  - If you want details of windows server, then you must install WMI tool on your Linux Box and need some modification on windows server also. Following [this](http://linuxian.com/2013/12/03/how-to-run-windows-commands-from-linux-box/) page to install WMI. 
+  - If you want details of windows server, then you must install WMI tool on your Linux Box and need some modification on windows server also. Refer [this](http://linuxian.com/2013/12/03/how-to-run-windows-commands-from-linux-box/) page to install WMI. 
 
 # Features
   - It Supports Following OS:
